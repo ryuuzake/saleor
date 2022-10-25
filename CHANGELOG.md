@@ -8,7 +8,7 @@ All notable, unreleased changes to this project will be documented in this file.
   <br/>Set `DB_CONN_MAX_AGE=0` to disable this behavior (adds overhead to requests)
 - Bump cryptography to 38.0.3: use OpenSSL 3.0.7 - #11126 by @NyanKiyoshi
 - Add `attribute` field to `AttributeValueTranslatableContent` type. #11028 by @zedzior
-
+- Allow assigning attribute value using its ID. Add to `AttributeValueInput` dedicated field for each input type. #11206 by @zedzior
 ...
 
 # 3.8.0
