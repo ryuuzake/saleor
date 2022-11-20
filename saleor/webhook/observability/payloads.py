@@ -17,7 +17,7 @@ from .exceptions import ApiCallTruncationError, EventDeliveryAttemptTruncationEr
 from .obfuscation import (
     anonymize_event_payload,
     anonymize_gql_operation_response,
-    hide_sensitive_headers,
+    filter_and_hide_headers,
 )
 from .payload_schema import (
     ApiCallPayload,
@@ -84,7 +84,7 @@ GQL_OPERATION_PLACEHOLDER_SIZE = len(dump_payload(GQL_OPERATION_PLACEHOLDER))
 
 def serialize_headers(headers: Optional[Dict[str, str]]) -> HttpHeaders:
     if headers:
-        return list(hide_sensitive_headers(headers).items())
+        return list(filter_and_hide_headers(headers).items())
     return []
 
 
