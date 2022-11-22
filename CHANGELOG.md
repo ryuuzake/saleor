@@ -25,6 +25,7 @@ All notable, unreleased changes to this project will be documented in this file.
 ### GraphQL API
 
 - Add `attribute` field to `AttributeValueTranslatableContent` type. #11028 by @zedzior
+- Add `schemaVersion` field to `Shop` type. #11275 by @zedzior
 
 ### Other changes
 
